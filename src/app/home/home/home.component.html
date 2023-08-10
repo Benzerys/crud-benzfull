@@ -1,0 +1,29 @@
+<nz-table #basicTable [nzData]="bdata">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Cd</th>
+        <th>Name</th>
+        <th>update_date</th>
+        <th>update_user</th>
+        <th>create_date</th>
+        <th>create_user</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of bdata">
+        <td>{{data.id}}</td>
+        <td>{{data.code}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.updatedate}}</td>
+        <td>{{data.updateuser}}</td>
+        <td>{{data.createdate}}</td>
+        <td>{{data.createuser}}</td>
+        <td>
+            <button type="button">Edit</button>
+            <button>Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
